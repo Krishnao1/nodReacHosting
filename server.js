@@ -6,8 +6,8 @@ app.use(express.static(path.join(__dirname, "build")));
 
 console.log(path.join(__dirname, "build", "index.html"));
 
-app.get("/*", (req, res) => {
-  return res.sendFile(path.join(__dirname, "build", "index.html"));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
 app.listen(5000, () => {

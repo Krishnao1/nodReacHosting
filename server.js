@@ -10,6 +10,13 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
+app.ge("/user", (req, res) => {
+  res.json({
+    status: "ok",
+    message: "user fucking",
+  });
+});
+
 app.listen(process.env.PORT || 3000, function () {
   console.log(
     "Express server listening on port %d in %s mode",
